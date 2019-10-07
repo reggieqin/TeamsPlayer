@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<case>
+    <script name="isalive" timeout="10" repeat='1'>
+        <script name="login" timeout="10"/>
+        <script name="isloggedin" timeout="30">
+            <script name='wait1sec' repeat='5' />
+            <script name='uclogin' params='{"username":"cmbucitest1", "password":"Happy123!@#", "ucdomain":"hz.jabberqa.cisco.com"}' timeout="10" />
+            <script name='isUCloggedin' timeout="30" >
+                <script name='wait1sec' repeat='5' />
+                <script name="logout" />
+                <script name='wait1sec' repeat='5' />
+            </script>
+        </script>
+    </script>
+</case>
+
