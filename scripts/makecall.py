@@ -18,4 +18,7 @@ def execute(host, params):
         return False
 
 if __name__ == '__main__':
-    execute('127.0.0.1', '{"uri":"238007"}')
+    if execute('127.0.0.1', '{"uri":"regqin@cisco.com"}'):
+        print "Succeed"
+    else:
+        print "Failed"

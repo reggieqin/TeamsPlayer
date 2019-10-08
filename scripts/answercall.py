@@ -16,4 +16,7 @@ def execute(host, params = None):
         return False
 
 if __name__ == '__main__':
-    execute('127.0.0.1')
+    if execute('127.0.0.1'):
+        print "Succeed"
+    else:
+        print "Failed"

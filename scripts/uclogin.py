@@ -19,4 +19,7 @@ def execute(host, params):
         return False
 
 if __name__ == '__main__':
-    execute('127.0.0.1', '{"username":"cmbucitest1", "password":"Happy123!@#", "ucdomain":"hz.jabberqa.cisco.com"}')
+    if execute('127.0.0.1', '{"username":"cmbucitest1", "password":"Happy123!@#", "ucdomain":"hz.jabberqa.cisco.com"}'):
+        print "Succeed"
+    else:
+        print "Failed"

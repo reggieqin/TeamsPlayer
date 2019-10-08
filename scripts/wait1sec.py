@@ -6,4 +6,7 @@ def execute(host, params = None):
     return True
 
 if __name__ == "__main__":
-    execute('')
+    if execute(''):
+        print "Succeed"
+    else:
+        print "Failed"

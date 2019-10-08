@@ -1,15 +1,14 @@
 import requests
 import sys
-import json
 
 def execute(host, params = None):
     try:
-        url = 'http://{}:8000/endcall'.format(host)
-        response = requests.post(url, json={})
-        if response.status_code != 202:
-            print "Failed to endcall"
+        url = 'http://{}:8000/activecall'.format(host)
+        response = requests.get(url)
+        if response.status_code != 200:
+            print "Failed to retrieve active call"
             return False
-
+        
         return True
     except Exception as e:
         print e
