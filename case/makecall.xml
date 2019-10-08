@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<case>
+    <script name="isalive" timeout="10" repeat='1'>
+        <script name="login" />
+        <script name="isloggedin" timeout="30">
+            <script name='wait1sec' repeat='5' />
+            <script name='makecall' params='{"uri":"regqin@cisco.com"}' />
+            <script name='isactivecall' timeout="30" >
+                <script name='wait1sec' repeat='10' />
+                <script name="endcall" />
+                <script name='wait1sec' repeat='5' />
+                <script name="logout" />
+                <script name='wait1sec' repeat='5' />            
+            </script>
+        </script>
+    </script>
+</case>
+
