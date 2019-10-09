@@ -31,7 +31,7 @@ def execute(host, params):
 
             data = {}
             data['uri'] = r['email']
-            return makecall(destination['host'], data)
+            return makecall(host, data)
         else:
             print "Invalid params"
             return False
