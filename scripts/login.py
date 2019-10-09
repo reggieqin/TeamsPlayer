@@ -21,7 +21,7 @@ def execute(host, params = None):
                 return False
             
             # Login with test account
-            url = 'http://{}:8000/login'.format(host)
+            url = 'http://{}:8000/login'.format(h)
             response = requests.post(url, json={'username':name, 'password':pwd})
             if response.status_code != 202:
                 print "Failed to login [{}]".format(h)
@@ -33,7 +33,7 @@ def execute(host, params = None):
     return True
 
 if __name__ == '__main__':
-    if execute('10.79.36.32'):
+    if execute('127.0.0.1;10.79.36.32'):
         print "Succeed"
     else:
         print "Failed"
