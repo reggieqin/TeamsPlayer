@@ -9,15 +9,15 @@ def execute(host, params = None):
             url = 'http://{}:8000/isUCloggedin'.format(h)
             response = requests.get(url)
             if response.status_code != 200:
-                print "Failed to get UClogin from [{}]".format(h)
+                print ("Failed to get UClogin from [{}]".format(h))
                 return False
         except Exception as e:
-            print e
+            print (e)
             return False
 
     return True
 if __name__ == '__main__':
     if execute('127.0.0.1'):
-        print "Succeed"
+        print ("Succeed")
     else:
-        print "Failed"
+        print ("Failed")

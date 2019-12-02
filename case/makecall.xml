@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <case>
-    <script name="isalive" host="127.0.0.1;10.79.36.32" timeout="10" repeat='1'>
-        <script name="login" host="127.0.0.1;10.79.36.32" />
-        <script name="isloggedin" host="127.0.0.1;10.79.36.32" timeout="30">
+    <script name="isalive" host="127.0.0.1;10.140.81.114" timeout="10" repeat='1'>
+        <script name="login" host="127.0.0.1;10.140.81.114" />
+        <script name="isloggedin" host="127.0.0.1;10.140.81.114" timeout="30">
             <script name='wait1sec' repeat='5' />
-            <script name='makecall' params='{"host":"10.79.36.32"}' />
+            <script name='makecall' params='{"host":"10.140.81.114"}' />
             <script name='isactivecall' timeout="30" >
                 <script name='wait1sec' repeat='10' />
-                <script name='answercall' host='10.79.36.32' />
+                <script name='answercall' host='10.140.81.114' />
                 <script name='wait1sec' repeat='15' />
                 <script name="endcall" />
                 <script name='wait1sec' repeat='5' />
                 <script name="logout" />
-                <script name="logout" host="10.79.36.32"/>
+                <script name="logout" host="10.140.81.114"/>
                 <script name='wait1sec' repeat='5' />            
             </script>
         </script>

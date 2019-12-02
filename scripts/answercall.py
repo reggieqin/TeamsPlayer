@@ -7,16 +7,16 @@ def execute(host, params = None):
         url = 'http://{}:8000/answercall'.format(host)
         response = requests.post(url, json={})
         if response.status_code != 202:
-            print "Failed to answercall"
+            print ("Failed to answercall")
             return False
 
         return True
     except Exception as e:
-        print e
+        print (e)
         return False
 
 if __name__ == '__main__':
     if execute('127.0.0.1'):
-        print "Succeed"
+        print ("Succeed")
     else:
-        print "Failed"
+        print ("Failed")

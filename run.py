@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 import xml.etree.ElementTree as ET
 
 ap = argparse.ArgumentParser()
-ap.add_argument("-f", "--file", help="path of jabber_ui.log")
+ap.add_argument("-f", "--file", help="path of case")
 sys.path.append(os.path.join(os.getcwd(), "scripts"))
 
 def parse_xml(root, func):       
@@ -17,7 +17,7 @@ def parse_xml(root, func):
     timeout = root.get('timeout') or 1
 
     if name is None:
-        print "Script name can not be empty"
+        print ('Script name can not be empty')
         return False
 
     for x in range(int(repeat)):        
@@ -27,7 +27,7 @@ def parse_xml(root, func):
         while datetime.now() <= t_timeout:
             ret = func(name, host, params)
             if ret:
-                print "Succeed to execute [{}]".format(name)
+                print ("Succeed to execute [{}]".format(name))
                 break
             else:
                 time.sleep(1)
@@ -36,7 +36,7 @@ def parse_xml(root, func):
             for child in root:
                 parse_xml(child, func)
         else:
-            print "Timeout to execute [{}] for {} times".format(name, x + 1)
+            print ("Timeout to execute [{}] for {} times".format(name, x + 1))
 
 def execute(*argv):
     name = argv[0]
